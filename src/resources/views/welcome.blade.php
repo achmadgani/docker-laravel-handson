@@ -81,9 +81,9 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Laravel lk
                 </div>
-
+				 <i class="fab fa-500px"></i>
                 <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
                     <a href="https://laracasts.com">Laracasts</a>
