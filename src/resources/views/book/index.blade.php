@@ -57,12 +57,13 @@
 	</div>
 	
 	<div class= "card-body">
-		<h3 class="mb-0" align="center">Graph Chart Example</h5>
+		<h3 class="mb-0" align="center">Prediction Value</h5>
 		<div class = "row">
 			<div class="col-xs-12 col-md-12 text-left">
 			 <!-- chart start -->
 			 <div class="container" style="width:80%">
-			   <canvas id="myChart"></canvas>
+			   <img src="{{ URL::to('/img/calendar.png') }}">
+			   <canvas id="myChartt"></canvas>
 			 </div>
 			 <!-- chart end -->
 			</div>

@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Chart;
-class ChartController extends Controller
+use App\Graph;
+class GraphController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +13,7 @@ class ChartController extends Controller
      */
     public function index()
     {
-        $books = Graph::all();
+        $graphs = Graph::all();
         return view('graph.index', compact('graphs'));
     }
 
