@@ -2,17 +2,6 @@
 use Symfony\Component\Process\Process;
 use Symfony\Component\Process\Exception\ProcessFailedException;
 
-$text = 'The text you are desperate to analyze :)';
-$process = new Process(["python docker-laravel-handson/script/add_graph.py"]);
-//$process = new Process(["python /Path/To/analyse_string.py \"{$text}\""]);
-$process->run();
-
-// executes after the command finishes
-if (!$process->isSuccessful()) {
-    throw new ProcessFailedException($process);
-}
-
-echo $process->getOutput();
 // Result (string): {'neg': 0.204, 'neu': 0.531, 'pos': 0.265, 'compound': 0.1779}
 ?>
 
