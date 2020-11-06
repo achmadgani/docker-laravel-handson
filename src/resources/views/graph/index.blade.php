@@ -2,6 +2,20 @@
 use Symfony\Component\Process\Process;
 use Symfony\Component\Process\Exception\ProcessFailedException;
 
+$text = 'shimizu.csv';
+$process = new Process(['python3',  '--version']);
+//$process = new Process(["python /Path/To/analyse_string.py \"{$text}\""]);
+$process->run();
+
+// executes after the command finishes
+if (!$process->isSuccessful()) {
+    throw new ProcessFailedException($process);
+}
+
+if(isset($_POST['button1'])) { 
+            echo 'tst';
+        } 
+
 // Result (string): {'neg': 0.204, 'neu': 0.531, 'pos': 0.265, 'compound': 0.1779}
 ?>
 
@@ -20,6 +34,10 @@ use Symfony\Component\Process\Exception\ProcessFailedException;
 	<h1>一覧画面</h1>
 	
 </div>
+    <form method="post"> 
+        <input type="submit" name="button1"
+                value="Button1"/> 
+    </form> 
 <div class="card">
 	<div class = "card-header">
 	</div>
