@@ -1,5 +1,4 @@
 FROM php:7.3-fpm-alpine
-
 LABEL maintainer "achmad.gani"
 
 ARG TZ

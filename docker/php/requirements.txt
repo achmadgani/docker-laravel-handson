@@ -1,3 +1,0 @@
-Numpy==1.19.4
-DateTime==4.3
-matplotlib==3.3.2
