@@ -16,7 +16,12 @@ RUN set -eux && \
 
 #install pandas from community
 RUN echo "@community http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories && \
-  apk add py3-pandas@community
+  apk add py3-pandas@community && \
+  pip3 install mysql-connector-python
+
+COPY ./my.cnf /etc/mysql/conf.d/my.cnf
+RUN chmod 644 /etc/mysql/conf.d/my.cnf
+
   
 
 

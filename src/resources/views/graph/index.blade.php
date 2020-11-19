@@ -23,6 +23,19 @@
             echo "<pre>$output</pre>";
             ?>
         </div>
+		<?php
+		$servername = "db";
+		$username = "edfuser";
+		$password = "iforcom1456";
+		$dbname = "edf";
+
+		$conn = new mysqli($servername, $username, $password, $dbname);
+		if ($conn->connect_errno) {
+			printf("MySQLi Connection failed: %s\n", $conn->connect_error."<br>SESSION: ");
+			exit();
+		}
+
+?>
 		<div class = "row">
 			<div class="col-xs-12 col-md-12 text-left">
 			 <!-- chart start -->
