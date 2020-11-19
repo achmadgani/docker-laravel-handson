@@ -177,6 +177,7 @@ finally:
 # End of Mysql
 
 # csv_read
+# measured
 df[0] = pd.to_datetime(df[0])
 df = df.rename(columns={ 0 : 'datetime'})
 df_r = df.set_index('datetime')
