@@ -30,7 +30,7 @@
 			<div class="col-xs-12 col-md-12 text-left">
 			 <!-- chart start -->
                 <div class="container" style="width:80%">
-                    <button class="btn btn-primary" onclick="window.location='{{ url('/graph') }}'">Back</button>
+                    <button class="btn btn-primary" onclick="window.location='{{ url('/graph') }}'">戻る</button>
                 </div>
                 <div class="container">
                     <img align="center" style="width:100%" src="{{url('/img/'.$imgurl.'.png')}}" alt="Image"/>
