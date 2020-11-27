@@ -17,6 +17,13 @@ class GraphController extends Controller
         return view('graph.index', compact('graphs'));
     }
 
+    public function graphdisplay(Request $request)
+    {
+        $datequery = $request->selectdate; #Get the Date query
+        $output = shell_exec("python3 py_graph/add_graph.py '".$datequery."'"); #execute in python environment
+        $imgurl = preg_replace("/[^a-zA-Z0-9]+/", "", $datequery); #remove hyphens, keep the date format
+        return view('graph.graphdisplay', compact('imgurl'));
+    }
     /**
      * Show the form for creating a new resource.
      *

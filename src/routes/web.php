@@ -24,10 +24,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
 Route::resource('/book', 'BookController');
 Route::resource('/graph', 'GraphController');
 Route::resource('/chart', 'ChartController');
+Route::post('/graphtest', 'GraphController@graphdisplay');

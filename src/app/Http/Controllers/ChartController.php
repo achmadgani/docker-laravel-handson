@@ -13,7 +13,7 @@ class ChartController extends Controller
      */
     public function index()
     {
-        $books = Graph::all();
+        $books = Chart::all();
         return view('graph.index', compact('graphs'));
     }
 
