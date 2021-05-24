@@ -28,3 +28,14 @@ Route::resource('/book', 'BookController');
 Route::resource('/graph', 'GraphController');
 Route::resource('/chart', 'ChartController');
 Route::post('/graphtest', 'GraphController@graphdisplay');
+
+#types addition
+Route::resource('/typesadd', 'TypesadditionController');
+Route::post('/typesadd/addnew', 'TypesadditionController@store');
+Route::post('/typesadd/{type_id}/edit', 'TypesadditionController@edit');
+Route::post('/typesadd/{type_id}/update', 'TypesadditionController@update');
+Route::get('/typesadd/{type_id}/delete', 'TypesadditionController@destroy');
+
+#types calendar
+Route::resource('/typescal', 'TypescalendarController');
+

@@ -32,7 +32,7 @@ services:
       - TZ=${TZ}
   
   db:
-    image: mysql:8.0.22
+    image: mysql:latest
     volumes:
       - ./db-store:/var/lib/mysql
       - ./logs:/var/log/mysql
